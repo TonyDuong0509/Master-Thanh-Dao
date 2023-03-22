@@ -1,0 +1,8 @@
+C:\Users\duong\OneDrive\Desktop\CS\CSSSS\bin\Debug\CSSSS.exe.config
+C:\Users\duong\OneDrive\Desktop\CS\CSSSS\bin\Debug\CSSSS.exe
+C:\Users\duong\OneDrive\Desktop\CS\CSSSS\bin\Debug\CSSSS.pdb
+C:\Users\duong\OneDrive\Desktop\CS\CSSSS\obj\Debug\CSSSS.csproj.AssemblyReference.cache
+C:\Users\duong\OneDrive\Desktop\CS\CSSSS\obj\Debug\CSSSS.csproj.SuggestedBindingRedirects.cache
+C:\Users\duong\OneDrive\Desktop\CS\CSSSS\obj\Debug\CSSSS.csproj.CoreCompileInputs.cache
+C:\Users\duong\OneDrive\Desktop\CS\CSSSS\obj\Debug\CSSSS.exe
+C:\Users\duong\OneDrive\Desktop\CS\CSSSS\obj\Debug\CSSSS.pdb
