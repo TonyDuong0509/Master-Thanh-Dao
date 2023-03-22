@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSSSS
 {
-    public class VegetableBread : Menu
+    public class VegetableBread : Menu, IOrder
     {
         public override void PrepareSpice()
         {
@@ -20,6 +20,16 @@ namespace CSSSS
             sauce = "Sour";
             toppings.Add("Cucumber");
             toppings.Add("Orion");
+        }
+
+        public void Order()
+        {
+            VegetableBread vegetableBread = new VegetableBread();
+            Console.WriteLine("Order VegetableBread..." + name);
+            vegetableBread.PrepareSpice();
+            vegetableBread.Prepare();
+            vegetableBread.AddEgg();
+            vegetableBread.box();
         }
     }
 }

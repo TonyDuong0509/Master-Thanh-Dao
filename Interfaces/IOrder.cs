@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace CSSSS
 {
-    interface IDrinkHot
+    interface IOrder
     {
-        void DrinkHot();
+        void Order();
     }
 }

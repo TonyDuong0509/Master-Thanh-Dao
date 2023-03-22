@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace CSSSS
 {
     class Program
     {
         static void Main(string[] args)
         {
-            HaoStore haoStore = new HaoStore();
+            List<IOrder> orders = new List<IOrder>();
             int select = 0;
             do
             {
@@ -29,7 +30,7 @@ namespace CSSSS
                     int select1 = 0;
                     do
                     {
-                        Console.WriteLine("======================================================");
+                        Console.WriteLine("*******************************");
                         Console.WriteLine("\nPlease select <1> to buy Cheese Bread");
                         Console.WriteLine("Please select <2> to buy Vegetable Bread");
                         Console.WriteLine("Please select <3> to buy Meat Bread");
@@ -37,12 +38,39 @@ namespace CSSSS
                         Console.WriteLine("Please select <5> to buy ColdMilktea");
                         Console.WriteLine();
                         select1 = int.Parse(Console.ReadLine());
-                        if (select1 == 1) haoStore.OrderCheeseBread();
-                        else if (select1 == 2) haoStore.OrderVegetableBread();
-                        else if (select1 == 3) haoStore.OrderMeatBread();
-                        else if (select1 == 4) haoStore.OrderHotMilkTea();
-                        else haoStore.OrderColdMilkTea();
-                    } while (select1 == 1 || select1 == 2 || select1 == 3 || select1 == 4 || select1 == 5);
+                        if (select1 == 1)
+                        {
+                            CheeseBread cheeseBread = new CheeseBread();
+                            orders.Add(cheeseBread);
+                            break;
+                        }
+                        else if (select1 == 2)
+                        {
+                            VegetableBread vegetableBread = new VegetableBread();
+                            orders.Add(vegetableBread);
+                        }
+
+                        else if (select1 == 3)
+                        {
+                            MeatBread meatBread = new MeatBread();
+                            orders.Add(meatBread);
+                        }
+                        else if (select1 == 4)
+                        {
+                            MilkTeaHot milkTeaHot = new MilkTeaHot();
+                            orders.Add(milkTeaHot);
+                        }
+                        else 
+                        {
+                            MilkTeaCold milkTeaCold = new MilkTeaCold();
+                            orders.Add(milkTeaCold);
+                        }
+                        foreach (IOrder o in orders)
+                        {
+                            Console.WriteLine("*******************************");
+                            o.Order();
+                        }
+                    } while (select1 >= 1 && select1 <= 5);
                     Console.WriteLine("--------- Thank you very much ---------");
                 }
             } while (select == 1);

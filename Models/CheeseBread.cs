@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSSSS
 {
-    public class CheeseBread : Menu
+    public class CheeseBread : Menu, IOrder
     {
         public override void PrepareSpice()
         {
@@ -20,6 +20,15 @@ namespace CSSSS
             sauce = "Sweet";
             toppings.Add("Tomato");
             toppings.Add("Chilli");
+        }
+        public void Order()
+        {
+            CheeseBread cheeseBread = new CheeseBread();
+            Console.WriteLine("Order CheeseBread..." + name);
+            cheeseBread.PrepareSpice();
+            cheeseBread.Prepare();
+            cheeseBread.AddEgg();
+            cheeseBread.box();
         }
     }
 

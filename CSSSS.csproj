@@ -43,14 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\IDrinkCold.cs" />
-    <Compile Include="Interfaces\IDrinkHot.cs" />
+    <Compile Include="Interfaces\IOrder.cs" />
+    <Compile Include="Models\MilkTeaCold.cs" />
     <Compile Include="Models\CheeseBread.cs" />
     <Compile Include="Models\CSSSS.cs" />
     <Compile Include="Models\Drinks.cs" />
-    <Compile Include="Models\HaoStore.cs" />
     <Compile Include="Models\MeatBread.cs" />
-    <Compile Include="Models\MilkTea.cs" />
+    <Compile Include="Models\MilkTeaHot.cs" />
     <Compile Include="Models\VegetableBread.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
