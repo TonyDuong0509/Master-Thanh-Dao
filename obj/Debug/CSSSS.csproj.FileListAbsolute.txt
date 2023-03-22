@@ -6,3 +6,11 @@ C:\Users\duong\OneDrive\Desktop\CS\CSSSS\obj\Debug\CSSSS.csproj.SuggestedBinding
 C:\Users\duong\OneDrive\Desktop\CS\CSSSS\obj\Debug\CSSSS.csproj.CoreCompileInputs.cache
 C:\Users\duong\OneDrive\Desktop\CS\CSSSS\obj\Debug\CSSSS.exe
 C:\Users\duong\OneDrive\Desktop\CS\CSSSS\obj\Debug\CSSSS.pdb
+C:\Users\duong\OneDrive\Desktop\CS\Master-Thanh-Dao\bin\Debug\CSSSS.exe.config
+C:\Users\duong\OneDrive\Desktop\CS\Master-Thanh-Dao\bin\Debug\CSSSS.exe
+C:\Users\duong\OneDrive\Desktop\CS\Master-Thanh-Dao\bin\Debug\CSSSS.pdb
+C:\Users\duong\OneDrive\Desktop\CS\Master-Thanh-Dao\obj\Debug\CSSSS.csproj.AssemblyReference.cache
+C:\Users\duong\OneDrive\Desktop\CS\Master-Thanh-Dao\obj\Debug\CSSSS.csproj.SuggestedBindingRedirects.cache
+C:\Users\duong\OneDrive\Desktop\CS\Master-Thanh-Dao\obj\Debug\CSSSS.csproj.CoreCompileInputs.cache
+C:\Users\duong\OneDrive\Desktop\CS\Master-Thanh-Dao\obj\Debug\CSSSS.exe
+C:\Users\duong\OneDrive\Desktop\CS\Master-Thanh-Dao\obj\Debug\CSSSS.pdb
