@@ -1,13 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CSSSS
 {
-    public abstract class Drinks
+    public abstract class Tea
     {
+        protected string name;
+        protected string size;
+        protected float price;
+
+        public void GetCup() { Console.WriteLine("Getting cup..." + name); }
+        public void ChooseSize() { Console.WriteLine("Choosing size..." + size); }
+        public float Pay(float price) { return price; }
         public abstract void Prepare();
     }
 }

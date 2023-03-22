@@ -33,14 +33,16 @@ namespace CSSSS
                         Console.WriteLine("\nPlease select <1> to buy Cheese Bread");
                         Console.WriteLine("Please select <2> to buy Vegetable Bread");
                         Console.WriteLine("Please select <3> to buy Meat Bread");
-                        Console.WriteLine("Please select <4> to buy Milktea");
+                        Console.WriteLine("Please select <4> to buy HotMilktea");
+                        Console.WriteLine("Please select <5> to buy ColdMilktea");
                         Console.WriteLine();
                         select1 = int.Parse(Console.ReadLine());
                         if (select1 == 1) haoStore.OrderCheeseBread();
                         else if (select1 == 2) haoStore.OrderVegetableBread();
                         else if (select1 == 3) haoStore.OrderMeatBread();
-                        else haoStore.OrderMilkTea();
-                    } while (select1 == 1 || select1 == 2 || select1 == 3 || select1 == 4);
+                        else if (select1 == 4) haoStore.OrderHotMilkTea();
+                        else haoStore.OrderColdMilkTea();
+                    } while (select1 == 1 || select1 == 2 || select1 == 3 || select1 == 4 || select1 == 5);
                     Console.WriteLine("--------- Thank you very much ---------");
                 }
             } while (select == 1);

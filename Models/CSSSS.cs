@@ -21,7 +21,10 @@ namespace CSSSS
             Console.WriteLine("Bread is baking..." + name);
             Console.WriteLine("Sauce is adding...");
             Console.WriteLine("Toppings are adding...");
-            toppings?.ForEach((topping) => Console.WriteLine("\t" + topping));
+            foreach(var topping in  toppings) 
+            {
+                Console.WriteLine("\t" + topping);
+            }
         }
 
         public void AddEgg()

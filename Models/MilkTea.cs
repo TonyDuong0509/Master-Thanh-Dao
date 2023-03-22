@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace CSSSS
 {
-    public class MilkTea : Drinks, IDrinkHot, IDrinkCold
+    public class MilkTea : Tea, IDrinkHot, IDrinkCold
     {
+        public MilkTea() 
+        {
+            name = "Oolong Tea";
+            size = "Size L";
+            price = 25.500f;
+        }
         public override void Prepare()
         {
             Console.WriteLine("Pour milk into tea...");

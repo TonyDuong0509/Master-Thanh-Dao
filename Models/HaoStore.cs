@@ -35,11 +35,23 @@ namespace CSSSS
             meatBread.box();
         }
 
-        public void OrderMilkTea()
+        public void OrderHotMilkTea()
         {
             MilkTea milkTea = new MilkTea();
+            milkTea.GetCup();
+            milkTea.ChooseSize();
+            Console.WriteLine("Paying..." + milkTea.Pay(25.555f) + "VNĐ");
             milkTea.Prepare();
             milkTea.DrinkHot();
+        }
+
+        public void OrderColdMilkTea()
+        {
+            MilkTea milkTea = new MilkTea();
+            milkTea.GetCup();
+            milkTea.ChooseSize();
+            Console.WriteLine("Paying..." + milkTea.Pay(25.555f) + "VNĐ");
+            milkTea.Prepare();
             milkTea.DrinkCold();
         }
     }
