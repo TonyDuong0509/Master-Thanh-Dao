@@ -15,17 +15,15 @@ namespace Store
         protected List<string> toppings = new List<string>();
 
         public abstract void PrepareSpice();
+        public abstract void AddTopping1();
+        public abstract void AddTopping2();
 
         public void Prepare()
         {
             Console.WriteLine("Tossing dough..." + name);
             Console.WriteLine("Bread is baking..." + name);
             Console.WriteLine("Sauce is adding...");
-            Console.WriteLine("Toppings:");
-            foreach(var topping in  toppings) 
-            {
-                Console.WriteLine("\t" + topping);
-            }
+           
         }
 
         public void AddEgg()

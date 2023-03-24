@@ -51,6 +51,8 @@
     <Compile Include="Features\Teas\MilkTeaCold.cs" />
     <Compile Include="Features\Teas\MilkTeaHot.cs" />
     <Compile Include="Interfaces\IOrder.cs" />
+    <Compile Include="Interfaces\IOrderTopping1.cs" />
+    <Compile Include="Interfaces\IOrderTopping2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

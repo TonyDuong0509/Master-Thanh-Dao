@@ -6,27 +6,38 @@ using System.Threading.Tasks;
 
 namespace Store
 {
-    public class VegetableBread : Menu, IOrder
+    public class VegetableBread : Menu, IOrder, IOrderTopping1, IOrderTopping2
     {
         public override void PrepareSpice()
         {
             Console.WriteLine("Vegetable is washed..");
         }
 
+        public override void AddTopping1()
+        {
+            Console.WriteLine("Toppings:");
+            toppings.Add("Cucumber");
+            foreach (var topping in toppings)
+            {
+                Console.WriteLine("\t" + topping);
+            }
+        }
+
+        public override void AddTopping2()
+        {
+            Console.WriteLine("Toppings:");
+            toppings.Add("Orion");
+            foreach (var topping in toppings)
+            {
+                Console.WriteLine("\t" + topping);
+            }
+        }
+
         public VegetableBread()
         {
-            int input = 0;
             name = "Vegetable Bread";
             dough = "Very thick";
             sauce = "Sour";
-            Console.WriteLine("Do you want to add Cucumber? - Input <1> YES or <2> No");
-            input = int.Parse(Console.ReadLine());
-            if (input == 1)
-                toppings.Add("Cucumber");
-            Console.WriteLine("Do you want to add Orion? - Input <1> YES or <2> No");
-            input = int.Parse(Console.ReadLine());
-            if (input == 1)
-                toppings.Add("Orion");
         }
 
         public void Order()
@@ -37,6 +48,17 @@ namespace Store
             vegetableBread.Prepare();
             vegetableBread.AddEgg();
             vegetableBread.box();
+        }
+        public void OrderTopping1()
+        {
+            VegetableBread vegetableBreadTopping1 = new VegetableBread();
+            vegetableBreadTopping1.AddTopping1();
+        }
+
+        public void OrderTopping2()
+        {
+            VegetableBread vegetableBreadTopping2 = new VegetableBread();
+            vegetableBreadTopping2.AddTopping2();
         }
     }
 }
