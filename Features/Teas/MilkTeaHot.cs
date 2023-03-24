@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSSSS
+namespace Store
 {
     public class MilkTeaHot : Tea, IOrder
     {
@@ -12,7 +12,7 @@ namespace CSSSS
         {
             name = "Oolong Tea";
             size = "Size S";
-            price = 25.500f;
+            price = 25.555f;
             drinkHot = "Drink Hot";
         }
         public override void Prepare()

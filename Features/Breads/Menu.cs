@@ -1,11 +1,11 @@
-﻿using CSSSS;
+﻿using Store;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSSSS
+namespace Store
 {
     public abstract class Menu
     {
@@ -21,7 +21,7 @@ namespace CSSSS
             Console.WriteLine("Tossing dough..." + name);
             Console.WriteLine("Bread is baking..." + name);
             Console.WriteLine("Sauce is adding...");
-            Console.WriteLine("Toppings are adding...");
+            Console.WriteLine("Toppings:");
             foreach(var topping in  toppings) 
             {
                 Console.WriteLine("\t" + topping);

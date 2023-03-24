@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSSSS
+namespace Store
 {
     public class CheeseBread : Menu, IOrder
     {
@@ -15,11 +15,18 @@ namespace CSSSS
 
         public CheeseBread()
         {
+            int input = 0;
             name = "Cheese Bread";
             dough = "Very thin";
             sauce = "Sweet";
-            toppings.Add("Tomato");
-            toppings.Add("Chilli");
+            Console.WriteLine("Do you want to add Tomato? - Input <1> YES or <2> No");
+            input = int.Parse(Console.ReadLine());
+            if (input == 1)
+                toppings.Add("Tomato");
+            Console.WriteLine("Do you want to add Chiili? - Input <1> YES or <2> No");
+            input = int.Parse(Console.ReadLine());
+            if (input == 1)
+                toppings.Add("Chiili");
         }
         public void Order()
         {

@@ -43,19 +43,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\Breads\CheeseBread.cs" />
+    <Compile Include="Features\Breads\Menu.cs" />
+    <Compile Include="Features\Breads\MeatBread.cs" />
+    <Compile Include="Features\Breads\VegetableBread.cs" />
+    <Compile Include="Features\Teas\Tea.cs" />
+    <Compile Include="Features\Teas\MilkTeaCold.cs" />
+    <Compile Include="Features\Teas\MilkTeaHot.cs" />
     <Compile Include="Interfaces\IOrder.cs" />
-    <Compile Include="Models\MilkTeaCold.cs" />
-    <Compile Include="Models\CheeseBread.cs" />
-    <Compile Include="Models\CSSSS.cs" />
-    <Compile Include="Models\Drinks.cs" />
-    <Compile Include="Models\MeatBread.cs" />
-    <Compile Include="Models\MilkTeaHot.cs" />
-    <Compile Include="Models\VegetableBread.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".vs\CSSSS\FileContentIndex\2b01d7bb-d1cf-479a-a069-ab4d29633830.vsidx" />
+    <None Include=".vs\CSSSS\FileContentIndex\76121dfd-c136-428a-b765-934a134aebf8.vsidx" />
+    <None Include=".vs\CSSSS\FileContentIndex\db74124a-ee45-43ac-8eab-754f878824ef.vsidx" />
+    <None Include=".vs\CSSSS\FileContentIndex\e58c0ce6-2193-449f-b2b0-8d2ff9801dc9.vsidx" />
+    <None Include=".vs\CSSSS\FileContentIndex\read.lock" />
     <None Include="App.config" />
+    <None Include="bin\Debug\CSSSS.exe.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\CSSSS.exe" />
+    <Content Include="bin\Debug\CSSSS.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".vs\CSSSS\FileContentIndex\merges\" />
+    <Folder Include=".vs\CSSSS\v17\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

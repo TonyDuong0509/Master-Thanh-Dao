@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace CSSSS
+namespace Store
 {
     class Program
     {
@@ -42,7 +42,6 @@ namespace CSSSS
                         {
                             CheeseBread cheeseBread = new CheeseBread();
                             orders.Add(cheeseBread);
-                            break;
                         }
                         else if (select1 == 2)
                         {
