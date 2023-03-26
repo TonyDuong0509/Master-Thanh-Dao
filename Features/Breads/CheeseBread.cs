@@ -20,17 +20,26 @@ namespace Store
             name = "Cheese Bread";
             dough = "Very thin";
             sauce = "Sweet";
-            toppings.Add("Tomato");
-            toppings.Add("Chiili");
         }
         public void Order()
         {
-            CheeseBread cheeseBread = new CheeseBread();
             Console.WriteLine("Order CheeseBread..." + name);
-            cheeseBread.PrepareSpice();
-            cheeseBread.Prepare();
-            cheeseBread.AddEgg();
-            cheeseBread.box();
+            this.PrepareSpice();
+            this.Prepare();
+            this.AddEgg();
+            this.Box();
+        }
+
+        public override void Add(string names)
+        {
+            if (!toppings.Contains(new Toppings(names))) toppings.Add(new Toppings(names));
+            else { }
+        }
+
+        public override void Remove(string names)
+        {
+            if (toppings.Contains(new Toppings(name))) toppings.Remove(new Toppings(name));
+            else { }
         }
     }
 }

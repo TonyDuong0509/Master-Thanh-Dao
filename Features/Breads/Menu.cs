@@ -12,7 +12,7 @@ namespace Store
         protected string name;
         protected string dough;
         protected string sauce;
-        protected List<string> toppings = new List<string>();
+        protected List<Toppings> toppings = new List<Toppings>();
 
         public abstract void PrepareSpice();
 
@@ -22,9 +22,9 @@ namespace Store
             Console.WriteLine("Bread is baking..." + name);
             Console.WriteLine("Sauce is adding...");
             Console.WriteLine("Toppings:...");
-            foreach(string topping in toppings) 
+            foreach(Toppings t in toppings) 
             {
-                Console.WriteLine("\t" + topping);
+                Console.WriteLine("\t" + t.name);
             }
         }
 
@@ -33,10 +33,13 @@ namespace Store
             Console.WriteLine("Egg is adding..." + name);
         }
 
-        public void box()
+        public void Box()
         {
             Console.WriteLine("Bread is boxing..." + name);
         }
+
+        public abstract void Add(string names);
+        public abstract void Remove(string names);
     }
 }
 

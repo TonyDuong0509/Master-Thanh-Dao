@@ -38,20 +38,45 @@ namespace Store
                         Console.WriteLine("Please select <5> to buy ColdMilktea");
                         Console.WriteLine();
                         select1 = int.Parse(Console.ReadLine());
+                        int choise = 0;
                         if (select1 == 1)
                         {
                             CheeseBread cheeseBread = new CheeseBread();
+                            Console.WriteLine("Do you want to add Tomato? - Choise <1> YES or <2> NO");
+                            choise = int.Parse(Console.ReadLine());
+                            if (choise == 1) cheeseBread.Add("Tomato");
+                            else cheeseBread.Remove("Tomato");
+                            Console.WriteLine("Do you want to add Chiili? - Choise <1> YES or <2> NO");
+                            choise = int.Parse(Console.ReadLine());
+                            if (choise == 1) cheeseBread.Add("Chiili");
+                            else cheeseBread.Remove("Chiili");
                             orders.Add(cheeseBread);
                         }
                         else if (select1 == 2)
                         {
                             VegetableBread vegetableBread = new VegetableBread();
+                            Console.WriteLine("Do you want to add Cucumber? - Choise <1> YES or <2> NO");
+                            choise = int.Parse(Console.ReadLine());
+                            if (choise == 1) vegetableBread.Add("Cucumber");
+                            else vegetableBread.Remove("Cucumber");
+                            Console.WriteLine("Do you want to add Orion? - Choise <1> YES or <2> NO");
+                            choise = int.Parse(Console.ReadLine());
+                            if (choise == 1) vegetableBread.Add("Orion");
+                            else vegetableBread.Remove("Orion");
                             orders.Add(vegetableBread);
                         }
 
                         else if (select1 == 3)
                         {
                             MeatBread meatBread = new MeatBread();
+                            Console.WriteLine("Do you want to add Meats? - Choise <1> YES or <2> NO");
+                            choise = int.Parse(Console.ReadLine());
+                            if (choise == 1) meatBread.Add("Meats");
+                            else meatBread.Remove("Meats");
+                            Console.WriteLine("Do you want to add Two Eggs? - Choise <1> YES or <2> NO");
+                            choise = int.Parse(Console.ReadLine());
+                            if (choise == 1) meatBread.Add("Two Eggs");
+                            else meatBread.Remove("Two Eggs");
                             orders.Add(meatBread);
                         }
                         else if (select1 == 4)

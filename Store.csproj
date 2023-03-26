@@ -50,6 +50,7 @@
     <Compile Include="Features\Teas\Tea.cs" />
     <Compile Include="Features\Teas\MilkTeaCold.cs" />
     <Compile Include="Features\Teas\MilkTeaHot.cs" />
+    <Compile Include="Features\Toppings\Toppings.cs" />
     <Compile Include="Interfaces\IOrder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

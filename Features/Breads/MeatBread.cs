@@ -16,19 +16,27 @@ namespace Store
         public MeatBread()
         {
             name = "Meat Bread";
-            dough = "Thick";
+            dough = "Very thick";
             sauce = "Salty";
-            toppings.Add("Meats");
-            toppings.Add("Two Eggs");
         }
         public void Order()
         {
-            MeatBread meatBread = new MeatBread();
             Console.WriteLine("Order MeatBread..." +name);
-            meatBread.PrepareSpice();
-            meatBread.Prepare();
-            meatBread.AddEgg();
-            meatBread.box();
+            this.PrepareSpice();
+            this.Prepare();
+            this.AddEgg();
+            this.Box();
+        }
+
+        public override void Add(string names)
+        {
+            if (!toppings.Contains(new Toppings(names))) toppings.Add(new Toppings(names));
+            else { }
+        }
+        public override void Remove(string names)
+        {
+            if (toppings.Contains(new Toppings(name))) toppings.Remove(new Toppings(name));
+            else { }
         }
     }
 }
