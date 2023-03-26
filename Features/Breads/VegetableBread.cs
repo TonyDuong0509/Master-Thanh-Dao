@@ -6,31 +6,11 @@ using System.Threading.Tasks;
 
 namespace Store
 {
-    public class VegetableBread : Menu, IOrder, IOrderTopping1, IOrderTopping2
+    public class VegetableBread : Menu, IOrder
     {
         public override void PrepareSpice()
         {
             Console.WriteLine("Vegetable is washed..");
-        }
-
-        public override void AddTopping1()
-        {
-            Console.WriteLine("Toppings:");
-            toppings.Add("Cucumber");
-            foreach (var topping in toppings)
-            {
-                Console.WriteLine("\t" + topping);
-            }
-        }
-
-        public override void AddTopping2()
-        {
-            Console.WriteLine("Toppings:");
-            toppings.Add("Orion");
-            foreach (var topping in toppings)
-            {
-                Console.WriteLine("\t" + topping);
-            }
         }
 
         public VegetableBread()
@@ -38,6 +18,8 @@ namespace Store
             name = "Vegetable Bread";
             dough = "Very thick";
             sauce = "Sour";
+            toppings.Add("Cucumber");
+            toppings.Add("Orion");
         }
 
         public void Order()
@@ -48,17 +30,6 @@ namespace Store
             vegetableBread.Prepare();
             vegetableBread.AddEgg();
             vegetableBread.box();
-        }
-        public void OrderTopping1()
-        {
-            VegetableBread vegetableBreadTopping1 = new VegetableBread();
-            vegetableBreadTopping1.AddTopping1();
-        }
-
-        public void OrderTopping2()
-        {
-            VegetableBread vegetableBreadTopping2 = new VegetableBread();
-            vegetableBreadTopping2.AddTopping2();
         }
     }
 }

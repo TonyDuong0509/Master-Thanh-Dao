@@ -6,31 +6,11 @@ using System.Threading.Tasks;
 
 namespace Store
 {
-    public class MeatBread : Menu, IOrder, IOrderTopping1, IOrderTopping2
+    public class MeatBread : Menu, IOrder
     {
         public override void PrepareSpice()
         {
             Console.WriteLine("Meat is cutting..");
-        }
-
-        public override void AddTopping1()
-        {
-            Console.WriteLine("Toppings:");
-            toppings.Add("Meats");
-            foreach (var topping in toppings)
-            {
-                Console.WriteLine("\t" + topping);
-            }
-        }
-
-        public override void AddTopping2()
-        {
-            Console.WriteLine("Toppings:");
-            toppings.Add("Two Eggs");
-            foreach (var topping in toppings)
-            {
-                Console.WriteLine("\t" + topping);
-            }
         }
 
         public MeatBread()
@@ -38,6 +18,8 @@ namespace Store
             name = "Meat Bread";
             dough = "Thick";
             sauce = "Salty";
+            toppings.Add("Meats");
+            toppings.Add("Two Eggs");
         }
         public void Order()
         {
@@ -47,16 +29,6 @@ namespace Store
             meatBread.Prepare();
             meatBread.AddEgg();
             meatBread.box();
-        }
-        public void OrderTopping1()
-        {
-            MeatBread meatBreadTopping1 = new MeatBread();
-            meatBreadTopping1.AddTopping1();
-        }
-        public void OrderTopping2()
-        {
-            MeatBread meatBreadTopping2 = new MeatBread();
-            meatBreadTopping2.AddTopping2();
         }
     }
 }
