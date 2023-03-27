@@ -5,41 +5,22 @@ using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using Store.Features;
 
-namespace Store
+namespace Store.Features.Breads
 {
-    public class CheeseBread : Menu, IOrder
+    public class CheeseBread<CheeseBreadRecipe> : Menu<CheeseBreadRecipe>
     {
         public override void PrepareSpice()
         {
             Console.WriteLine("Cheese is prepared...");
         }
 
-        public CheeseBread()
+        public CheeseBread() : base(new CheeseBreadRecipe())
         {
             name = "Cheese Bread";
             dough = "Very thin";
             sauce = "Sweet";
-        }
-        public void Order()
-        {
-            Console.WriteLine("Order CheeseBread..." + name);
-            this.PrepareSpice();
-            this.Prepare();
-            this.AddEgg();
-            this.Box();
-        }
-
-        public override void Add(string names)
-        {
-            if (!toppings.Contains(new Toppings(names))) toppings.Add(new Toppings(names));
-            else { }
-        }
-
-        public override void Remove(string names)
-        {
-            if (toppings.Contains(new Toppings(name))) toppings.Remove(new Toppings(name));
-            else { }
         }
     }
 }

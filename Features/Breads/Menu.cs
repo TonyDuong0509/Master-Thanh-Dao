@@ -5,16 +5,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Store
+namespace Store.Features.Breads
 {
-    public abstract class Menu
+    public abstract class Menu<T> where T : RecipeBase
     {
         protected string name;
         protected string dough;
         protected string sauce;
-        protected List<Toppings> toppings = new List<Toppings>();
 
         public abstract void PrepareSpice();
+        private T _recipe;
+
+        
+        public Menu(T recipe)
+        {
+            _recipe = recipe;
+        }
 
         public void Prepare()
         {
@@ -22,24 +28,23 @@ namespace Store
             Console.WriteLine("Bread is baking..." + name);
             Console.WriteLine("Sauce is adding...");
             Console.WriteLine("Toppings:...");
-            foreach(Toppings t in toppings) 
-            {
-                Console.WriteLine("\t" + t.name);
-            }
         }
 
-        public void AddEgg()
-        {
-            Console.WriteLine("Egg is adding..." + name);
-        }
 
         public void Box()
         {
             Console.WriteLine("Bread is boxing..." + name);
         }
 
-        public abstract void Add(string names);
-        public abstract void Remove(string names);
+        public void Order(T recipe)
+        {
+            _recipe = recipe;
+        }
+
+        public void Order()
+        {
+            // TODO place an order
+        }
     }
 }
 

@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Store
 {
-    public class Toppings
+    public class Topping
     {
-        public string name;
-        public Toppings(string names)
+        public string Name { get; }
+        public Topping(string names)
         {
-            this.name = names;
+            this.Name = names;
         }
     }
 }
