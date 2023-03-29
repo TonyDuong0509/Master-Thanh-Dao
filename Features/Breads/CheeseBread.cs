@@ -7,9 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Store.Features;
 
-namespace Store.Features.Breads
+namespace Store.Features.Breads.Recipes
 {
-    public class CheeseBread<CheeseBreadRecipe> : Menu<CheeseBreadRecipe>
+    public class CheeseBread : Menu<CheeseBreadRecipe>
     {
         public override void PrepareSpice()
         {

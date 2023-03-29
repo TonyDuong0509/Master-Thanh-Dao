@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Store
 {
-    public class MilkTeaCold : Tea, IOrder
+    public class MilkTeaCold : Tea
     {
         public MilkTeaCold()
         {

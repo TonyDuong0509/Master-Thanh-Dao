@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Store.Features.Breads;
+using Store.Features.Breads.Recipes;
+using Store.Features.Breads.Toppings;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +14,6 @@ namespace Store
     {
         static void Main(string[] args)
         {
-            List<IOrder> orders = new List<IOrder>();
             int select = 0;
             do
             {
@@ -38,61 +40,20 @@ namespace Store
                         Console.WriteLine("Please select <5> to buy ColdMilktea");
                         Console.WriteLine();
                         select1 = int.Parse(Console.ReadLine());
-                        int choise = 0;
                         if (select1 == 1)
                         {
+                            RecipeBase recipeBase = new RecipeBase();
                             CheeseBread cheeseBread = new CheeseBread();
-                            Console.WriteLine("Do you want to add Tomato? - Choise <1> YES or <2> NO");
-                            choise = int.Parse(Console.ReadLine());
-                            if (choise == 1) cheeseBread.Add("Tomato");
-                            else cheeseBread.Remove("Tomato");
-                            Console.WriteLine("Do you want to add Chiili? - Choise <1> YES or <2> NO");
-                            choise = int.Parse(Console.ReadLine());
-                            if (choise == 1) cheeseBread.Add("Chiili");
-                            else cheeseBread.Remove("Chiili");
-                            orders.Add(cheeseBread);
-                        }
-                        else if (select1 == 2)
-                        {
-                            VegetableBread vegetableBread = new VegetableBread();
-                            Console.WriteLine("Do you want to add Cucumber? - Choise <1> YES or <2> NO");
-                            choise = int.Parse(Console.ReadLine());
-                            if (choise == 1) vegetableBread.Add("Cucumber");
-                            else vegetableBread.Remove("Cucumber");
-                            Console.WriteLine("Do you want to add Orion? - Choise <1> YES or <2> NO");
-                            choise = int.Parse(Console.ReadLine());
-                            if (choise == 1) vegetableBread.Add("Orion");
-                            else vegetableBread.Remove("Orion");
-                            orders.Add(vegetableBread);
-                        }
+                            CheeseBreadRecipe cheeseBreadRecipe = new CheeseBreadRecipe();
+                            Cheese cheese = new Cheese();
+                            //Topping topping = new Topping("cheese");
+                            
 
-                        else if (select1 == 3)
-                        {
-                            MeatBread meatBread = new MeatBread();
-                            Console.WriteLine("Do you want to add Meats? - Choise <1> YES or <2> NO");
-                            choise = int.Parse(Console.ReadLine());
-                            if (choise == 1) meatBread.Add("Meats");
-                            else meatBread.Remove("Meats");
-                            Console.WriteLine("Do you want to add Two Eggs? - Choise <1> YES or <2> NO");
-                            choise = int.Parse(Console.ReadLine());
-                            if (choise == 1) meatBread.Add("Two Eggs");
-                            else meatBread.Remove("Two Eggs");
-                            orders.Add(meatBread);
-                        }
-                        else if (select1 == 4)
-                        {
-                            MilkTeaHot milkTeaHot = new MilkTeaHot();
-                            orders.Add(milkTeaHot);
-                        }
-                        else 
-                        {
-                            MilkTeaCold milkTeaCold = new MilkTeaCold();
-                            orders.Add(milkTeaCold);
-                        }
-                        foreach(IOrder o in orders)
-                        {
-                            Console.WriteLine("*********************************");
-                            o.Order();
+                            cheeseBread.PrepareSpice();
+                            cheeseBread.Prepare();
+                            Console.WriteLine("Do you want to eat cheese");
+                            cheeseBreadRecipe.AddTopping(new Topping("cheese"));
+                            recipeBase.AddTopping(cheese);
                         }
                     } while (select1 >= 1 && select1 <= 5);
                     Console.WriteLine("--------- Thank you very much ---------");

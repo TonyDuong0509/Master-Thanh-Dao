@@ -40,11 +40,6 @@ namespace Store.Features.Breads
         {
             _recipe = recipe;
         }
-
-        public void Order()
-        {
-            // TODO place an order
-        }
     }
 }
 
