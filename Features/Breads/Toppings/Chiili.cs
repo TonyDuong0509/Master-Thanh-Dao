@@ -1,8 +1,8 @@
 namespace Store.Features.Breads.Toppings
 {
-    public class Egg : Store.Topping
+    public class Chiili : Store.Topping
     {
-        public Egg() : base("egg")
+        public Chiili() : base("chiili")
         {
             
         }

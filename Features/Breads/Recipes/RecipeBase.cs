@@ -1,4 +1,5 @@
 using System.Linq;
+using System.Collections.Generic;
 
 namespace Store.Features.Breads
 {
@@ -6,9 +7,15 @@ namespace Store.Features.Breads
     {
         private readonly List<Store.Topping> _toppings;
 
-        public IReadonlyCollection<Store.Topping> Topping => _toppings.AsReadonlyCollection();
+        public IReadonlyCollection<Store.Topping> Topping
+        {
+            get
+            {
+                return (IReadonlyCollection<Topping>)_toppings.AsReadOnly();
+            }
+        }
 
-        public CheeseBreadRecipe()
+        public RecipeBase()
         {
             _toppings = new List<Store.Topping>();
         }
