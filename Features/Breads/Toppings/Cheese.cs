@@ -4,7 +4,7 @@ namespace Store.Features.Breads.Toppings
     {
         public Cheese() : base("cheese")
         {
-            
+
         }
     }
 }

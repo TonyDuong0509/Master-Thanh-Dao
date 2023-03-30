@@ -14,6 +14,7 @@ namespace Store
     {
         static void Main(string[] args)
         {
+            List<Topping> toppings = new List<Topping>();
             int select = 0;
             do
             {
@@ -42,18 +43,15 @@ namespace Store
                         select1 = int.Parse(Console.ReadLine());
                         if (select1 == 1)
                         {
-                            RecipeBase recipeBase = new RecipeBase();
                             CheeseBread cheeseBread = new CheeseBread();
                             CheeseBreadRecipe cheeseBreadRecipe = new CheeseBreadRecipe();
                             Cheese cheese = new Cheese();
-                            //Topping topping = new Topping("cheese");
-                            
-
                             cheeseBread.PrepareSpice();
+                            Console.WriteLine("i want to add cucumber for cheesebread");
+                            cheeseBreadRecipe.AddTopping(new Topping("Cucumber"));
+                            cheeseBread.Order(cheeseBreadRecipe);
                             cheeseBread.Prepare();
-                            Console.WriteLine("Do you want to eat cheese");
-                            cheeseBreadRecipe.AddTopping(new Topping("cheese"));
-                            recipeBase.AddTopping(cheese);
+                            cheeseBread.Box();
                         }
                     } while (select1 >= 1 && select1 <= 5);
                     Console.WriteLine("--------- Thank you very much ---------");
