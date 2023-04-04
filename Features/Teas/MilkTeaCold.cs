@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Store
 {
-    public class MilkTeaCold : Tea
+    public class MilkTeaCold : Tea, IOrder
     {
         public MilkTeaCold()
         {
@@ -21,10 +21,11 @@ namespace Store
         }
         public void Order()
         {
-           MilkTeaCold milkTeaCold = new MilkTeaCold();
+            MilkTeaCold milkTeaCold = new MilkTeaCold();
             Console.WriteLine("Order Milktea..." + name);
             milkTeaCold.Prepare();
-            Console.WriteLine("Adding ice into cup..." +drinkCold);
+            Console.WriteLine("Adding ice into cup..." + drinkCold);
+            Console.WriteLine("Paying...."+price);
         }
     }
 }

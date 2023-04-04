@@ -28,9 +28,7 @@ namespace Store.Features.Breads
             Console.WriteLine("Tossing dough..." + name);
             Console.WriteLine("Bread is baking..." + name);
             Console.WriteLine("Sauce is adding...");
-            Console.WriteLine("Toppings:...");
         }
-
 
         public void Box()
         {

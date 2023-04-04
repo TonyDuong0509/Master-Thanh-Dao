@@ -9,7 +9,7 @@ using Store.Features;
 
 namespace Store.Features.Breads.Recipes
 {
-    public class CheeseBread : Menu<CheeseBreadRecipe>
+    public class CheeseBread : Menu<CheeseBreadRecipe>, IOrder
     {
         public override void PrepareSpice()
         {
@@ -21,6 +21,14 @@ namespace Store.Features.Breads.Recipes
             name = "Cheese Bread";
             dough = "Very thin";
             sauce = "Sweet";
+        }
+
+        public void Order()
+        {
+            CheeseBread cheeseBread = new CheeseBread();
+            cheeseBread.PrepareSpice();
+            cheeseBread.Prepare();
+            cheeseBread.Box();
         }
     }
 }

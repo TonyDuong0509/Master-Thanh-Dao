@@ -48,15 +48,19 @@
     <Compile Include="Features\Breads\MeatBread.cs" />
     <Compile Include="Features\Breads\Recipes\CheeseBreadRecipe.cs" />
     <Compile Include="Features\Breads\Recipes\IReadonlyCollection.cs" />
+    <Compile Include="Features\Breads\Recipes\MeatBreadRecipe.cs" />
     <Compile Include="Features\Breads\Recipes\RecipeBase.cs" />
-    <Compile Include="Features\Breads\Toppings\Cheese.cs" />
+    <Compile Include="Features\Breads\Recipes\VegetableBreadRecipe.cs" />
     <Compile Include="Features\Breads\Toppings\Chiili.cs" />
+    <Compile Include="Features\Breads\Toppings\Cucumber.cs" />
+    <Compile Include="Features\Breads\Toppings\Egg.cs" />
     <Compile Include="Features\Breads\Toppings\Tomato.cs" />
     <Compile Include="Features\Breads\VegetableBread.cs" />
     <Compile Include="Features\Teas\Tea.cs" />
     <Compile Include="Features\Teas\MilkTeaCold.cs" />
     <Compile Include="Features\Teas\MilkTeaHot.cs" />
     <Compile Include="Features\Toppings\Toppings.cs" />
+    <Compile Include="IOrder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

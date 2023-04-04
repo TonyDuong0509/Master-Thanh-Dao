@@ -14,3 +14,11 @@ C:\Users\duong\OneDrive\Desktop\New folder\Master-Thanh-Dao\obj\Debug\CSSSS.pdb
 C:\Users\duong\OneDrive\Desktop\New folder\Master-Thanh-Dao\bin\Debug\CSSSS.exe.config
 C:\Users\duong\OneDrive\Desktop\New folder\Master-Thanh-Dao\bin\Debug\CSSSS.exe
 C:\Users\duong\OneDrive\Desktop\New folder\Master-Thanh-Dao\bin\Debug\CSSSS.pdb
+C:\Users\duong\OneDrive\Desktop\Master Thành Đào\Master-Thanh-Dao\bin\Debug\CSSSS.exe.config
+C:\Users\duong\OneDrive\Desktop\Master Thành Đào\Master-Thanh-Dao\bin\Debug\CSSSS.exe
+C:\Users\duong\OneDrive\Desktop\Master Thành Đào\Master-Thanh-Dao\bin\Debug\CSSSS.pdb
+C:\Users\duong\OneDrive\Desktop\Master Thành Đào\Master-Thanh-Dao\obj\Debug\Store.csproj.AssemblyReference.cache
+C:\Users\duong\OneDrive\Desktop\Master Thành Đào\Master-Thanh-Dao\obj\Debug\Store.csproj.SuggestedBindingRedirects.cache
+C:\Users\duong\OneDrive\Desktop\Master Thành Đào\Master-Thanh-Dao\obj\Debug\Store.csproj.CoreCompileInputs.cache
+C:\Users\duong\OneDrive\Desktop\Master Thành Đào\Master-Thanh-Dao\obj\Debug\CSSSS.exe
+C:\Users\duong\OneDrive\Desktop\Master Thành Đào\Master-Thanh-Dao\obj\Debug\CSSSS.pdb

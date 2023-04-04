@@ -15,6 +15,7 @@ namespace Store
         static void Main(string[] args)
         {
             List<Topping> toppings = new List<Topping>();
+            List<IOrder> orders = new List<IOrder>();
             int select = 0;
             do
             {
@@ -22,42 +23,47 @@ namespace Store
                                   1. Cheese Bread
                                   2. Vegetable Bread
                                   3. Meat Bread
-                                  -- Milktea --
+                                  4. Milktea Cold
+                                  5. Milktea Hot
                                         
                                     PLEASE ORDER...
-                                  <- Select <1> to ORDER ->
+                                  <- Select <Number> to ORDER ->
                                   <- Select any <key> to QUIT ->");
                 select = int.Parse(Console.ReadLine());
                 if (select == 1)
                 {
-                    int select1 = 0;
-                    do
-                    {
-                        Console.WriteLine("*******************************");
-                        Console.WriteLine("\nPlease select <1> to buy Cheese Bread");
-                        Console.WriteLine("Please select <2> to buy Vegetable Bread");
-                        Console.WriteLine("Please select <3> to buy Meat Bread");
-                        Console.WriteLine("Please select <4> to buy HotMilktea");
-                        Console.WriteLine("Please select <5> to buy ColdMilktea");
-                        Console.WriteLine();
-                        select1 = int.Parse(Console.ReadLine());
-                        if (select1 == 1)
-                        {
-                            CheeseBread cheeseBread = new CheeseBread();
-                            CheeseBreadRecipe cheeseBreadRecipe = new CheeseBreadRecipe();
-                            Cheese cheese = new Cheese();
-                            cheeseBread.PrepareSpice();
-                            Console.WriteLine("i want to add cucumber for cheesebread");
-                            cheeseBreadRecipe.AddTopping(new Topping("Cucumber"));
-                            cheeseBread.Order(cheeseBreadRecipe);
-                            cheeseBread.Prepare();
-                            cheeseBread.Box();
-                        }
-                    } while (select1 >= 1 && select1 <= 5);
-                    Console.WriteLine("--------- Thank you very much ---------");
+                    CheeseBread cheeseBread = new CheeseBread();
+                    orders.Add(cheeseBread);
                 }
-            } while (select == 1);
-            Console.ReadLine();
+                else if (select == 2)
+                {
+                    VegetableBread vegetableBread = new VegetableBread();
+                    orders.Add(vegetableBread);
+                }
+                else if (select == 3)
+                {
+                    MeatBread meatBread = new MeatBread();
+                    orders.Add(meatBread);
+                }
+                else if (select == 4)
+                {
+                    MilkTeaCold milkTeaCold = new MilkTeaCold();
+                    orders.Add(milkTeaCold);
+                }
+                else
+                {
+                    MilkTeaHot milkTeaHot = new MilkTeaHot();
+                    orders.Add(milkTeaHot);
+                }
+                foreach (IOrder o in orders)
+                {
+                    o.Order();
+                }
+                Console.WriteLine("-----------------------------------------");
+                Console.WriteLine("Enter to continue order !!!");
+                Console.ReadLine();
+            } while (select!=5);
         }
     }
 }
+
