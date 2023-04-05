@@ -24,6 +24,8 @@ namespace Store.Features.Breads.Recipes
         public void Order()
         {
             MeatBread meatBread = new MeatBread();
+            MeatBreadRecipe meatBreadRecipe = new MeatBreadRecipe();
+            meatBreadRecipe.AddMyRecipe(new List<Topping>());
             meatBread.PrepareSpice();
             meatBread.Prepare();
             meatBread.Box();

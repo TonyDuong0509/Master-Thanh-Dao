@@ -26,6 +26,8 @@ namespace Store.Features.Breads.Recipes
         public void Order()
         {
             CheeseBread cheeseBread = new CheeseBread();
+            CheeseBreadRecipe cheeseBreadRecipe = new CheeseBreadRecipe();
+            cheeseBreadRecipe.AddMyRecipe(new List<Topping>());
             cheeseBread.PrepareSpice();
             cheeseBread.Prepare();
             cheeseBread.Box();

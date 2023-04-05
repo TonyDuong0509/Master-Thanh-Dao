@@ -22,7 +22,9 @@ namespace Store.Features.Breads.Recipes
         
         public void Order()
         {
-            VegetableBread vegetableBread = new VegetableBread(); 
+            VegetableBread vegetableBread = new VegetableBread();
+            VegetableBreadRecipe vegetableBreadRecipe = new VegetableBreadRecipe();
+            vegetableBreadRecipe.AddMyRecipe(new List<Topping>());
             vegetableBread.PrepareSpice();
             vegetableBread.Prepare();
             vegetableBread.Box();

@@ -8,13 +8,15 @@ namespace Store.Features.Breads.Recipes
     {
         public VegetableBreadRecipe() : base()
         {
-            List<Topping> toppings = new List<Topping>();
-            toppings.Add(new Cucumber());
-            toppings.Add(new Tomato());
-            Console.WriteLine("Toppings are adding...");
-            foreach (Topping t in toppings)
+        }
+
+        public override void AddMyRecipe(List<Topping> _toppings)
+        {
+            _toppings.Add(new Cucumber());
+            _toppings.Add(new Tomato());
+            foreach(var item in _toppings)
             {
-                Console.WriteLine(t.Name);
+                Console.WriteLine(item.Name);
             }
         }
     }

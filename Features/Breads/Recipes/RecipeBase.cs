@@ -2,10 +2,11 @@ using System.Linq;
 using System.Collections.Generic;
 using System;
 using Store.Features.Breads.Recipes;
+using Store.Features.Breads.Toppings;
 
 namespace Store.Features.Breads
 {
-    public class RecipeBase
+    public abstract class RecipeBase
     {
         private readonly List<Store.Topping> _toppings;
 
@@ -19,8 +20,9 @@ namespace Store.Features.Breads
 
         public RecipeBase()
         {
-            _toppings = new List<Store.Topping>();
         }
+
+        public abstract void AddMyRecipe(List<Topping> _toppings);
 
         public virtual void AddTopping(Store.Topping toppings)
         {
