@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Store.Features.Breads.Recipes
 {
-    public class MeatBread : Menu<MeatBreadRecipe>, IOrder
+    public class MeatBread : Menu<MeatBreadRecipe>
     {
         public override void PrepareSpice()
         {
@@ -19,16 +19,6 @@ namespace Store.Features.Breads.Recipes
             name = "Meat Bread";
             dough = "Very thick";
             sauce = "Salty";
-        }
-
-        public void Order()
-        {
-            MeatBread meatBread = new MeatBread();
-            MeatBreadRecipe meatBreadRecipe = new MeatBreadRecipe();
-            meatBreadRecipe.AddMyRecipe(new List<Topping>());
-            meatBread.PrepareSpice();
-            meatBread.Prepare();
-            meatBread.Box();
         }
     }
 }

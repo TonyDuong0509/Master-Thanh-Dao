@@ -8,16 +8,24 @@ namespace Store.Features.Breads.Recipes
     {
         public MeatBreadRecipe() : base()
         {
-        }
-
-        public override void AddMyRecipe(List<Topping> _toppings)
-        {
             _toppings.Add(new Egg());
+            _toppings.Add(new Cucumber());
             _toppings.Add(new Chiili());
-            foreach(var item in _toppings)
+            foreach (var item in _toppings)
             {
                 Console.WriteLine(item.Name);
             }
         }
+
+        //public override void AddTopping(List<Topping> toppings)
+        //{
+        //    toppings.Add(new Egg());
+        //    toppings.Add(new Tomato());
+        //    toppings.Add(new Chiili());
+        //    foreach(var topping in toppings)
+        //    {
+        //        Console.WriteLine(topping.Name);
+        //    }
+        //}
     }
 }

@@ -6,10 +6,11 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using Store.Features;
+using Store.Features.Breads.Toppings;
 
 namespace Store.Features.Breads.Recipes
 {
-    public class CheeseBread : Menu<CheeseBreadRecipe>, IOrder
+    public class CheeseBread : Menu<CheeseBreadRecipe>
     {
         public override void PrepareSpice()
         {
@@ -21,16 +22,6 @@ namespace Store.Features.Breads.Recipes
             name = "Cheese Bread";
             dough = "Very thin";
             sauce = "Sweet";
-        }
-
-        public void Order()
-        {
-            CheeseBread cheeseBread = new CheeseBread();
-            CheeseBreadRecipe cheeseBreadRecipe = new CheeseBreadRecipe();
-            cheeseBreadRecipe.AddMyRecipe(new List<Topping>());
-            cheeseBread.PrepareSpice();
-            cheeseBread.Prepare();
-            cheeseBread.Box();
         }
     }
 }

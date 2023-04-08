@@ -6,27 +6,17 @@ using Store.Features.Breads.Toppings;
 
 namespace Store.Features.Breads
 {
-    public abstract class RecipeBase
+    public class RecipeBase
     {
-        private readonly List<Store.Topping> _toppings;
-
-        public IReadonlyCollection<Store.Topping> Topping
-        {
-            get
-            {
-                return (IReadonlyCollection<Topping>)_toppings.AsReadOnly();
-            }
-        }
+        protected readonly List<Store.Topping> _toppings;
 
         public RecipeBase()
         {
+            _toppings = new List<Store.Topping>();
         }
-
-        public abstract void AddMyRecipe(List<Topping> _toppings);
-
-        public virtual void AddTopping(Store.Topping toppings)
+        public virtual void AddTopping(List<Topping> toppings)
         {
-            _toppings.Add(toppings);
+            toppings = new List<Store.Topping>();
         }
 
         public virtual void RemoveTopping(Store.Topping toppings)

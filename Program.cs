@@ -1,6 +1,7 @@
 ﻿using Store.Features.Breads;
 using Store.Features.Breads.Recipes;
 using Store.Features.Breads.Toppings;
+using Store.Features.Teas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,6 @@ namespace Store
         static void Main(string[] args)
         {
             List<Topping> toppings = new List<Topping>();
-            List<IOrder> orders = new List<IOrder>();
             int select = 0;
             do
             {
@@ -33,36 +33,44 @@ namespace Store
                 if (select == 1)
                 {
                     CheeseBread cheeseBread = new CheeseBread();
-                    orders.Add(cheeseBread);
+                    cheeseBread.PrepareSpice();
+                    cheeseBread.Prepare();
+                    cheeseBread.Box();
                 }
                 else if (select == 2)
                 {
                     VegetableBread vegetableBread = new VegetableBread();
-                    orders.Add(vegetableBread);
+                    vegetableBread.PrepareSpice();
+                    vegetableBread.Prepare();
+                    vegetableBread.Box();
                 }
                 else if (select == 3)
                 {
                     MeatBread meatBread = new MeatBread();
-                    orders.Add(meatBread);
+                    meatBread.PrepareSpice();
+                    meatBread.Prepare();
+                    meatBread.Box();
                 }
                 else if (select == 4)
                 {
                     MilkTeaCold milkTeaCold = new MilkTeaCold();
-                    orders.Add(milkTeaCold);
+                    milkTeaCold.GetCup();
+                    milkTeaCold.ChooseSize();
+                    milkTeaCold.Prepare();
+                    milkTeaCold.Pay(37.555f);
                 }
                 else
                 {
                     MilkTeaHot milkTeaHot = new MilkTeaHot();
-                    orders.Add(milkTeaHot);
-                }
-                foreach (IOrder o in orders)
-                {
-                    o.Order();
+                    milkTeaHot.GetCup();
+                    milkTeaHot.ChooseSize();
+                    milkTeaHot.Prepare();
+                    milkTeaHot.Pay(25.555f);
                 }
                 Console.WriteLine("-----------------------------------------");
                 Console.WriteLine("Enter to continue order !!!");
                 Console.ReadLine();
-            } while (select!=5);
+            } while (select != 5);
         }
     }
 }

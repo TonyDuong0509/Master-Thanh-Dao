@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Store
+namespace Store.Features.Breads.Toppings
 {
-    public interface IOrder
+    public class Pearl : Topping
     {
-        void Order();
+        public Pearl() : base("Pearl") { }
     }
 }

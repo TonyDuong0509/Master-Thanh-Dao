@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Store.Features.Breads.Recipes
 {
-    public class VegetableBread : Menu<VegetableBreadRecipe>, IOrder
+    public class VegetableBread : Menu<VegetableBreadRecipe>
     {
         public override void PrepareSpice()
         {
@@ -18,16 +18,6 @@ namespace Store.Features.Breads.Recipes
             name = "Vegetable Bread";
             dough = "Thin";
             sauce = "Sour";
-        }
-        
-        public void Order()
-        {
-            VegetableBread vegetableBread = new VegetableBread();
-            VegetableBreadRecipe vegetableBreadRecipe = new VegetableBreadRecipe();
-            vegetableBreadRecipe.AddMyRecipe(new List<Topping>());
-            vegetableBread.PrepareSpice();
-            vegetableBread.Prepare();
-            vegetableBread.Box();
         }
     }
 }

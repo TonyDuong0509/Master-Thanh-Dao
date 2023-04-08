@@ -1,31 +1,23 @@
-﻿using System;
+﻿using Store.Features.Breads.Recipes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Store
+namespace Store.Features.Teas
 {
-    public class MilkTeaCold : Tea, IOrder
+    public class MilkTeaCold : Tea<RecipeMilkTeaCold>
     {
-        public MilkTeaCold()
+        public MilkTeaCold() : base(new RecipeMilkTeaCold())
         {
             name = "Oolong Tea";
             size = "Size XL";
-            price = 37.555f;
             drinkHot = "Drink Cold";
         }
         public override void Prepare()
         {
             Console.WriteLine("Pour milk into tea...");
-        }
-        public void Order()
-        {
-            MilkTeaCold milkTeaCold = new MilkTeaCold();
-            Console.WriteLine("Order Milktea..." + name);
-            milkTeaCold.Prepare();
-            Console.WriteLine("Adding ice into cup..." + drinkCold);
-            Console.WriteLine("Paying...."+price);
         }
     }
 }
